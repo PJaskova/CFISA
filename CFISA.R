@@ -1,16 +1,14 @@
 setwd("~/Desktop/github")
 
 # packages
-install.packages("zCompositions")
-pack=c("zCompositions","robCompositions","compositions","fda","scatterplot3d","chemometrics",
-       "carData","car","depthTools","boot","Epi","viridis","boot")
+pack=c("robCompositions","fda","car","boot","Epi","viridis")
 lapply(pack, require, character.only = TRUE,quietly =TRUE)
 rm(pack)
 
 source("function.R")
 
 # loading data
-density=read.csv("hustoty.csv")
+density=read.csv("density.csv")
 clr_density = cenLR((density))$x.clr #clr transformation
 
 # response
